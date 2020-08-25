@@ -14,7 +14,7 @@ class CategoriesTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
         $categories = [
-            "Uncategorized", "Billing/Payments", "Technical question"
+            "General", "Billing/Payments", "Technical question", "calls", "Reports"
         ];
 
         foreach($categories as $category)

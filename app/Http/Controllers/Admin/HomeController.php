@@ -19,7 +19,33 @@ class HomeController
         $closedTickets = Ticket::whereHas('status', function($query) {
             $query->whereName('Closed');
         })->count();
+        $priority = Ticket::whereHas('priority', function($query)
+        {
+            $query->whereName('high');
+        
+        })->count();
 
-        return view('home', compact('totalTickets', 'openTickets', 'closedTickets'));
+        return view('home', compact('totalTickets', 'openTickets', 'closedTickets', 'priority'));
     }
+
+    // public function googleLineChart()
+    // {
+    //     $graph = Ticket::table('priority')
+    //                 ->select(
+    //                     Ticket::raw("SUM(high) as high"),
+    //                     Ticket::raw("SUM(medium) as mid"),
+    //                     Ticket::raw("SUM(low) as low")) 
+    //                 ->get();
+
+
+    //     $result[] = ['high','medium','low'];
+    //     foreach ($graph as $key => $value) {
+    //         $result[++$key] = [$value->high, (int)$value->mid, (int)$value->low];
+    //     }
+
+
+    //     return view('google-line-chart')
+    //             ->with('visitor',json_encode($result));
+    // }
+
 }

@@ -54,3 +54,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Audit Logs
     Route::resource('audit-logs', 'AuditLogsController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
 });
+//graphs
+    // Route::get('google-line-chart', 'HomeController@googleLineChart');

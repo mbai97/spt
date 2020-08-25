@@ -16,7 +16,7 @@
                     @endif
 
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card text-white bg-primary">
                                 <div class="card-body pb-3">
                                     <div class="text-value">{{ number_format($totalTickets) }}</div>
@@ -26,7 +26,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card text-white bg-success">
                                 <div class="card-body pb-3">
                                     <div class="text-value">{{ number_format($openTickets) }}</div>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card text-white bg-danger">
                                 <div class="card-body pb-3">
                                     <div class="text-value">{{ number_format($closedTickets) }}</div>
@@ -45,6 +45,28 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-3">
+                            <div class="card text-white bg-danger">
+                                <div class="card-body pb-3">
+                                    <div class="text-value">{{ number_format($priority) }}</div>
+                                    <div>High priority</div>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- <div class="col-md-12"> --}}
+                            <div class="container p-3 my-3 bg-dark text-white">
+                            {{-- <div class="card text-white bg-dark"> --}}
+                                <div class="card-body pb-24">
+                                    <div class="text-value">{{ number_format($graph) }}</div>
+                                    <div>Graph</div>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

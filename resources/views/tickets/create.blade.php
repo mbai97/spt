@@ -45,6 +45,26 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="project" class="col-md-4 col-form-label text-md-right">Project</label>
+
+                            <div class="col-md-6">
+                                <select id="project" type="project" class="form-control select2" name="project">
+                                    <option value="kabete">kabete</option>
+                                    <option>eldoret</option>
+                                    <option>tbi</option>
+                                </select>
+                                
+
+                                {{-- @error('site')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror --}}
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">@lang('cruds.ticket.fields.title')</label>
 
                             <div class="col-md-6">

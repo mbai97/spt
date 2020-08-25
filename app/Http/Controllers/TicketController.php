@@ -33,6 +33,7 @@ class TicketController extends Controller
         $request->validate([
             'title'         => 'required',
             'content'       => 'required',
+            'project'       => 'required',
             'author_name'   => 'required',
             'author_email'  => 'required|email',
         ]);
