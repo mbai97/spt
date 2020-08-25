@@ -27,6 +27,7 @@ class UsersTableSeeder extends Seeder
                 'name'           => 'Agent 2',
                 'email'          => 'agent2@agent2.com',
                 'password'       => '$2y$10$UnLIBQB1uZZC1r5msFWTPuZCZsMBUpZINpJ48G5FmMxz6yVGP83rO',
+                // 'project'        =>'kabete'
                 'remember_token' => null,
             ],
             [
